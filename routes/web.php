@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('front-end.front-page');
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
