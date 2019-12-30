@@ -14,6 +14,8 @@ return [
         'add_default_role_on_register' => true,
         'default_role'                 => 'user',
         'default_avatar'               => 'users/default.png',
+        'admin_permission'             => 'browse_admin',
+        'namespace'                    => App\User::class,
         'redirect'                     => '/admin',
     ],
 
@@ -54,8 +56,10 @@ return [
     |
     */
 
+    'assets_path' => '/vendor/tcg/voyager/assets',
+
     'storage' => [
-        'disk' => env('FILESYSTEM_DRIVER', 'public'),
+        'disk' => 'public',
     ],
 
     /*
